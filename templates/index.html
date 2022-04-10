@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base href="../static/">
+	<title>HOME</title>
+	<style>
+
+		.logo {
+			margin-left: 80%;
+			width: 150px;
+			height: 80px;
+			border-radius: 80px;
+			position: absolute;
+			padding: 12px 15px;
+			border-radius: 100px;
+		}
+
+		.nav_link {
+			list-style-type: none;
+		}
+
+		.nav_link li {
+			display: inline-block;
+			padding: 0px 20px;
+		}
+
+		.nav_link li a {
+			transition: all 0.3s ease 0s;
+			color: white;
+			display: block;
+
+		}
+
+		.nav_link li a:hover {
+			color: red;
+		}
+
+		body {
+			margin: 0;
+			background-color: gainsboro;
+		}
+
+		#masculino {
+			width: 10px;
+		}
+
+		#feminino {
+			width: 10px;
+		}
+
+		#enrolado {
+			width: 10px;
+		}
+
+		nav {
+			background-image: radial-gradient(#1c1c1c, #363636);
+			display: block;
+			position: fixed;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		nav h1 {
+			text-align: center;
+			color: white !important;
+		}
+
+		body input {
+			width: 250px;
+			box-shadow: none;
+			background-color: gainsboro;
+			padding: 4px;
+		}
+
+		body #nd {
+			width: 40px;
+		}
+
+		#submit {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		#submit input {
+			font-size: large;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			cursor: pointer;
+			margin-bottom: 20px;
+		}
+
+		/*css dos elementos da section*/
+
+		#foto_inicio {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #acessorio img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5rem;
+        }
+
+        #acessorio {
+            list-style: none;
+            display: flex;
+            align-content: space-around;
+            text-align: center;
+            margin-left: 22rem;
+        }
+
+        #acessorio span {
+            margin-left: 5rem;
+        }
+
+        #img1, #img2, #img3 {
+            margin-top: 70px;
+            width: 250px;
+            height: 180px;
+            display: absolute;
+        }
+
+        .conteiner {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .conteiner img {
+            width: 300px;
+            height: 210px;
+        }
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav>
+			<img class="logo" src="imagens/rango.jpg">
+			<h1> HOTEL DE TRÂNSITO</H1>
+			<ul class="nav_link">
+				<li><a href="index.html" id="home" target="_blanck">HOME</a></li>
+				<li><a href="#" id="reservas">RESERVAS</a></li>
+			</ul>
+		</nav>
+	</header><br><br><br><br><br><br><br>
+	<section>
+		<ul id="foto_inicio">
+			<li>
+				<img src="imagens/sala1.jpg" alt="" id="img1">
+			</li>
+			<li>
+				<img src="imagens/fora.jpg" alt="" id="img2">
+			</li>
+			<li>
+				<img src="imagens/sala2.jpg" alt="" id="img3">
+			</li>
+		</ul>
+		<ul id="acessorio">
+			<li>
+				<img src="imagens/ar.png" alt=""><br>
+				<span>Ar-condicionado</span>
+			</li>
+			<li>
+				<img src="imagens/tv.png" alt=""><br>
+				<span>Televisão</span>
+			</li>
+			<li>
+				<img src="imagens/wifi.png" alt=""><br>
+				<span>Wifi</span>
+			</li>
+		</ul>
+		<div class="conteiner">
+			<img src="imagens/hotel1.jpg" alt="">
+			<p>Já pensou em se hospedar no<br> melhor hotel da cidade?!<br> aproveitar essa bela maravilha<br> por preços
+				imperdíveis</p>
+			<img src="imagens/hotel2.jpg" alt="">
+			<p>Não fique de fora e <br>venha logo fazer parte <br>desta grande aventura</p>
+		</div><br><br><br>
+	</section>
+	<form method="get" action="">
+		<fieldset>
+			<legend>CADASTRO DE HÓSPEDES</legend>
+			<p>
+				<label for="data">Data de Entrada:</label>
+				<input type="datetime-local" id="de" required>
+				<label for="data">Data de Saída:</label> <input type="datetime-local" id="ds" required>
+			</p>
+			
+			<p>
+				<label for="number">N° de adultos:</label>
+				<input type="number" name="n-adultos" id="nd">
+				<label for="number">N° de crianças:</label>
+				<input type="number" name="n-criancas" id="nd">
+			</p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>DADOS PESSOAIS</legend>
+			<label for="nome">Nome:</label>
+			<input type="text" name="nome" placeholder="Nome completo.">
+			<label for="email">Email:</label>
+			<input type="email" name="email" placeholder="Email válido.">
+			<p>
+				<label for="cpf">CPF:</label>
+				<input type="text" name="cpf" maxlength="11" placeholder="000.000.000-00." id="cpf">
+				<label for="telefone">Telefone:</label>
+				<input type="text" name="telefone" id="telefone" maxlength="11" placeholder=" (99) 99999-9999">
+			</p>
+			<p>
+				<label for="genero">Gênero:</label>
+				<input type="radio" name="gênero" value="Masculino" id="masculino">
+				<label for="">Masculino</label>
+				<input type="radio" name="gênero" value="Feminino" id="feminino">
+				<label for="">Feminino</label>
+				<input type="radio" name="gênero" value="enrolado" id="enrolado">
+				<label for="">Enrolado</label>
+			</p>
+			<p>
+				<label for="foto">Foto:</label>
+				<input type="file" name="arquivos" id="arquivo">
+			</p>
+			<br>
+
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>ENDEREÇO</legend>
+			<label for="cidade">Cidade:<label>
+			<input type="text" placeholder="cidade">
+			<label for="estado">Estado:<label>
+			<input type="text" placeholder="Estado"><br><br>
+			<label for="cep">CEP:<label>
+			<input type="text" placeholder="00000-000">
+			<label for="bairro">Bairro:<label>
+			<input type="text" placeholder="Bairro">
+			<label for="rua">Rua:<label>
+			<input type="text" placeholder="Logradouro"><br><br>
+			<label for="numero">Número:<label>
+			<input type="text" placeholder="Número">
+			<label for="complemento">Complemento:<label>
+			<input type="text" placeholder="Casa, Apartamento, bloco..."><br>
+		</fieldset>
+		<br>
+		<fieldset>
+			<label for="observacao">Observações:</label> <br>
+			<textarea name="observacao" id="observacao" cols="40" rows="10"></textarea>
+		</fieldset>
+		<br>
+		<div id="submit"><input type="submit" name="Enviar" value="Cadastrar"></div>
+	</form>
+</body>
+
+</html>
